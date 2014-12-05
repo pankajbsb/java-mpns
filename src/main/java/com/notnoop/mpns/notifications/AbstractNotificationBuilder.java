@@ -116,6 +116,17 @@ import com.notnoop.mpns.internal.Pair;
         this.headers.add(Pair.of("X-CallbackURI", callbackUri));
         return (A)this;
     }
+    
+    /**
+     * Sets the custom header
+     *
+     * @param contentType   the content type of the body
+     * @return  this
+     */
+    public A customHeader(String key, String value) {
+        this.headers.add(Pair.of(key, value));
+        return (A)this;
+    }
 
     /**
      * Sets the notification body content type
