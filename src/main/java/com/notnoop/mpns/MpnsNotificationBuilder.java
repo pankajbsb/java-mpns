@@ -34,6 +34,7 @@ import com.notnoop.mpns.notifications.IconicTileNotification;
 import com.notnoop.mpns.notifications.RawNotification;
 import com.notnoop.mpns.notifications.TileNotification;
 import com.notnoop.mpns.notifications.ToastNotification;
+import com.notnoop.mpns.notifications.VoipNotification;
 
 /**
  * Represents a builder for constructing the notifications requests,
@@ -79,5 +80,14 @@ public class MpnsNotificationBuilder {
      */
     public RawNotification.Builder raw() {
         return new RawNotification.Builder();
+    }
+    
+    /**
+     * Sets the notification type to a Voip notification
+     *
+     * @return  a row notification builder
+     */
+    public VoipNotification.Builder voip() {
+        return new VoipNotification.Builder();
     }
 }
